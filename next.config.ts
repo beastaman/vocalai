@@ -5,15 +5,12 @@ const LOADER = path.resolve(__dirname, 'visual-edits/component-tagger-loader.js'
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: '**' },
-      { protocol: 'http', hostname: '**' },
-    ],
+    remotePatterns: [{ protocol: 'https', hostname: '**' }, { protocol: 'http', hostname: '**' }],
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  // REMOVED: eslint block (no longer supported in Next 16)
+  // No eslint block here!
   turbopack: {
     rules: {
       "*.{jsx,tsx}": {
